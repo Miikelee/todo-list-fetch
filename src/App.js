@@ -16,7 +16,7 @@ function App() {
     ReadData()},[]);
 
 const ReadData = () => {
-        fetch("https://assets.breatheco.de/apis/fake/todos/user/rubenucv",{
+        fetch("https://assets.breatheco.de/apis/fake/todos/user/mikelee",{
             method: "GET",
             headers: {
                 "Content-type":"application/json"
@@ -33,7 +33,7 @@ const ReadData = () => {
     evento.preventDefault();
     setTodos([...todos, { label: '' + input + ' ', done: false }]);
     console.log(todos);
-    fetch("https://assets.breatheco.de/apis/fake/todos/user/rubenucv", {
+    fetch("https://assets.breatheco.de/apis/fake/todos/user/mikelee", {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ const ReadData = () => {
 
   const deleteElement = (i) => {
     setTodos(todos.filter((numero, indice) => indice !== i));
-    fetch("https://assets.breatheco.de/apis/fake/todos/user/rubenucv", {
+    fetch("https://assets.breatheco.de/apis/fake/todos/user/mikelee", {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -71,7 +71,7 @@ const ReadData = () => {
 
   //En Caso de querer borrar usuario y toda la lista de tareas
    /* const deleteList = () => {
-    fetch("https://assets.breatheco.de/apis/fake/todos/user/rubenucv", {
+    fetch("https://assets.breatheco.de/apis/fake/todos/user/mikelee", {
       method: 'DELETE',
       headers: new Headers({
         'Content-Type': 'application/json'
@@ -89,9 +89,9 @@ const ReadData = () => {
 
   return (
     <div className="todo-app">
-      <h1>What's the Plan For Today?</h1>
+      <h1>TODO LIST </h1>
       <form className="todo-form" onSubmit={addTodo} >
-        <input type="text" className="todo-input" required placeholder="Add a Todo" onChange={handleChange} value={input} type="text" />
+        <input type="text" className="todo-input" required placeholder="Write a todo" onChange={handleChange} value={input} type="text" />
         <button className="todo-button" type="submit" id="button-addon2">Add todo</button>
       </form>
 
